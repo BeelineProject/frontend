@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+  getValue(val: any){
+    console.log(val);
+  }
 }
