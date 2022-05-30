@@ -5,4 +5,12 @@ body{
     padding: 0;
     display:inline-block;
     width: 100%;
+    height: 20%;
+    }
+    .u-image{
+        max-height: 15px;
+        align-items: baseline;
+    }
+    #1 {
+        vertical-align: top;
     }
