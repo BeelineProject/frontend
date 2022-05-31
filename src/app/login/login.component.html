@@ -24,20 +24,20 @@
                 novalidate
               >
                 <div class="u-form-group u-form-name u-label-top">
-                  <label for="username" class="u-label u-text-custom-color-4 u-label-1">Username</label>
+                  <label for="identifier" class="u-label u-text-custom-color-4 u-label-1">Username</label>
                 
                 <input
                 type="text"
                 class="u-border-3 u-border-palette-1-light-3 u-custom-color-8 u-input u-input-rectangle u-radius-10"
                 placeholder="please enter your username "
-                name="username"
-                [(ngModel)]="form.username"
+                name="identifier"
+                [(ngModel)]="form.identifier"
                 required
                
-                #username="ngModel"
+                #identifier="ngModel"
               />
               <div class="alert-danger"  role="alert"
-              *ngIf="username.errors && f.submitted">
+              *ngIf="identifier.errors && f.submitted">
               Username is required!
                 </div>
                

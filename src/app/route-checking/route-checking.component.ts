@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 import { RouteCheckingService } from '../_services/route-checking.service';
 
 @Component({
@@ -11,10 +12,12 @@ export class RouteCheckingComponent implements OnInit {
    location:null
   };
   isSuccessful = false;
-  checkFailed = false;
+  isFailed = false;
   errorMessage = '';
+  
+  message='';
 
-  constructor(private routeService : RouteCheckingService) { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     var main = function() {
@@ -51,19 +54,28 @@ export class RouteCheckingComponent implements OnInit {
     $(document).ready(main);
   }
   onSubmit(): void {
-    const {route } = this.form;
 
-    this.routeService.getRouteState(route).subscribe({
+    this.apiService.findRoute(this.form.location).subscribe({
       next: data => {
-        console.log(data);
-        this.isSuccessful = true;
-        this.checkFailed = false;
+        if (data){
+        this.isSuccessful=true;
+        this.isFailed = false;
+        this.message =`The state of route ${data.location} is ${data.state} because of some ${data.cause}`;
+       }else {
+        this.isSuccessful=false;
+        this.isFailed = true;
+        this.errorMessage = "Sorry we don't have any valuable data for this route , but you can be the one to help others by filling the survey below ";
+       }
+       
       },
       error: err => {
-        this.errorMessage = err.error.message;
-        this.checkFailed = true;
+        this.errorMessage = "sorry we couldn't find an answer to your question";
+        this.isFailed = true;
+        this.isSuccessful=false;
       }
     });
+    
+
   }
 
 }

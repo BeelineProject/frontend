@@ -14,10 +14,16 @@
     <div class="jumbotron">
 
      
-  </div>
- 
-<form action="#" autocomplete="off"
-*ngIf="!isSuccessful"
+
+   <div *ngIf="isSuccessful" class="alert-successful" >
+    {{message}}
+   </div>
+
+   <div *ngIf="isFailed" class="alert-failure" >
+    {{errorMessage }} 
+   </div>
+
+ <form  href="#" autocomplete="off"
 name="form"
 (ngSubmit)="f.form.valid && onSubmit()"
 #f="ngForm"
@@ -33,14 +39,13 @@ novalidate>
     <fieldset class="enter">
       <button></button>
     </fieldset>
-    <div class="alert alert-warning" *ngIf="f.submitted && checkFailed">
-      checking failed!<br />{{ errorMessage }}
-    </div>
-
-  <div class="alert alert-success" *ngIf="isSuccessful">
-    your request is being treated!
+  
+  </form> </div>
+   
+  <div *ngIf="message" class="alert-successful" >
+    <span class="closebtn33" onclick="this.parentElement.style.display='none';" >&times;</span>
+    {{message}}
   </div>
-  </form>
 </body>
 </html>
 

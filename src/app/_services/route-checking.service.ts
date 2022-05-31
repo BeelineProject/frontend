@@ -10,7 +10,7 @@ export class RouteCheckingService {
 
   constructor(private http: HttpClient) { }
     getRouteState(route: string): Observable<any> {
-      return this.http.get(API_URL + 'route'+":"+route,{ responseType: 'text' });
+      return this.http.get(API_URL + 'survey'+":"+route);
     }
   }
 

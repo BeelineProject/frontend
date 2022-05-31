@@ -11,5 +11,8 @@ export class ApiService {
   public createSurvey(survey: Survey){
     return this.httpClient.post<Survey>(`${this.API_SERVER}/survey`, survey);
   }
+  public findRoute(location: string){
+    return this.httpClient.get<Survey>(`${this.API_SERVER}/survey/${location}`);
+  }
 }
 

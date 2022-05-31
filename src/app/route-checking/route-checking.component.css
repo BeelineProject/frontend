@@ -242,25 +242,17 @@ label{
 }
 
 /* Initial menu */
-.alert-success{
-  color: rgb(24, 133, 14);
-  background: none;
-}
+
 h2{
   color: #fff;
   align-items: center;
   
 }
-.alert-warning{
-  color: rgb(157, 27, 27);
-  background: none;
-  display: outside;
-  overflow: visible;
-}
+
 .menu {
    background-color: #98e1eb;
   /* IE9, iOS 3.2+ */
-  background-image: url(nature.jpg);
+  background-image: url();
  /* Android 2.3 */
   background-image: -webkit-repeating-linear-gradient(top,rgb(18, 218, 244) 0%,rgb(3, 197, 219) 22.1%,rgb(239, 239, 239) 40.8%,rgb(239, 239, 239) 54.4%,rgb(195, 230, 237) 79.6%,rgb(195, 230, 237) 100%);
   /* IE10+ */
@@ -271,16 +263,48 @@ height: 100%;
 position: fixed;
 width: 285px;
 }
+/* The alert message box */
+.alert-successful {
+  padding: 15px;
+  background-color: rgb(255, 243, 174); /* Red */
+  color: rgb(2, 28, 84);
+  font-size: large;
+  font-weight: 4000;
+  margin-bottom: 15px;
+}
+.alert-failure {
+  padding: 15px;
+  background-color: rgb(251, 140, 96); /* Red */
+  color: rgb(2, 28, 84);
+  font-size: large;
+  font-weight: 4000;
+  margin-bottom: 15px;
+}
 
+
+.closebtn33{
+  margin-left: 20px;
+  color: rgb(14, 0, 69);
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn33:hover {
+  color: rgb(112, 243, 250);
+}
 .menu ul {
-border-top: 1px solid #636366;
+border-top: 1px solid rgb(243, 255, 197);
 list-style: none;
 margin: 0;
 padding: 0;
 }
 
 .menu li {
-border-bottom: 1px solid #636366;
+border-bottom: 1px solid #e8ffbd;
 /*font-family: 'Open Sans', sans-serif;*/
 line-height: 45px;
 padding-bottom: 3px;
@@ -303,13 +327,13 @@ text-decoration: none;
 
 .icon-close {
 cursor: pointer;
-background-color: RGBA(55, 73, 87, 0.5);
+background-color: #e8ffbd;
 padding-left: 10px;
 padding-top: 10px;
 }
 
 .icon-menu {
-color: RGBA(55, 73, 87, 0.8);
+color: #e8ffbd;
 cursor: pointer;
 /*font-family: 'Open Sans', sans-serif;*/
 font-size: 24px;
@@ -404,7 +428,7 @@ position: absolute;
 top: -5px;
 letter-spacing: 10px;
 font-size: 20px;
-color: RGBA(55, 73, 87, 0.8);
+color: #e8ffbd;
 -webkit-transform-origin: left;
     -ms-transform-origin: left;
         transform-origin: left;
@@ -446,10 +470,10 @@ outline: none;
 .after {
 width: 100%;
 height: 2px;
-background: -webkit-gradient(linear, left top, right top, color-stop(50%, RGBA(254, 253, 255, 1.00)), color-stop(50%, transparent));
-background: -webkit-linear-gradient(left, RGBA(254, 253, 255, 1.00) 50%, transparent 50%);
-background: -o-linear-gradient(left, RGBA(254, 253, 255, 1.00) 50%, transparent 50%);
-background: linear-gradient(to right, RGBA(254, 253, 255, 1.00) 50%, transparent 50%);
+background: -webkit-gradient(linear, left top, right top, color-stop(50%, #e8ffbd), color-stop(50%, transparent));
+background: -webkit-linear-gradient(left, #e8ffbd 50%, transparent 50%);
+background: -o-linear-gradient(left, #e8ffbd 50%, transparent 50%);
+background: linear-gradient(to right, #e8ffbd 50%, transparent 50%);
 background-color: RGBA(55, 73, 87, 0.8);
 background-size: 200% 100%;
 background-position: 100% 0;
@@ -482,7 +506,7 @@ background: -webkit-gradient(linear, left top, right top, color-stop(50%, white)
 background: -webkit-linear-gradient(left, white 50%, transparent 50%);
 background: -o-linear-gradient(left, white 50%, transparent 50%);
 background: linear-gradient(to right, white 50%, transparent 50%);
-background-color: RGBA(55, 73, 87, 0.8);
+background-color: #00365d;
 background-size: 200% 100%;
 background-position: 100% 0;
 -webkit-transition: all 0.3s ease;
@@ -519,7 +543,16 @@ color: white;
 
 @media (min-width: 1260px){
 .body{
-  background-size: 100%;
+  
+  background:#fff url('../../assets/images/coolstreet2.png') no-repeat center;
+background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+ 
+-webkit-background-size: cover;
+   -moz-background-size: cover;
+     -o-background-size: cover;
+        background-size: cover;
 }
 }
 
@@ -558,6 +591,15 @@ label{
   letter-spacing: 3px;
 }
 }
+.btn2 {
+  border: none; /* Remove borders */
+  color: white; /* Add a text color */
+  padding: 14px 28px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+}
+
+.success2 {background-color: #04AA6D;} /* Green */
+.success2:hover {background-color: #46a049;}
 
 
 
