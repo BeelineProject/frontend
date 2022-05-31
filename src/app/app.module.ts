@@ -1,12 +1,21 @@
-import { NgModule } from '@angular/core';
-import { FormsModule, NgForm} from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
+
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { LoginComponent } from "./login/login.component";
+import { NavBarComponent } from "./nav-bar/nav-bar.component";
+import { RegisterComponent } from "./register/register.component";
+import { RouteCheckingComponent } from './route-checking/route-checking.component';
+
+
 import { ROUTING } from './app.routing';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+
 import { TrafficSurveyComponent } from './traffic-survey/traffic-survey.component';
-import { HttpClientModule } from '@angular/common/http';
+
 
 import { FirstPageComponent } from './first-page/first-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -18,6 +27,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
+
+    LoginComponent,
+    RegisterComponent,
+ 
+    LoginComponent,
+  
+    RouteCheckingComponent
+
     NavBarComponent,
     TrafficSurveyComponent,
     FirstPageComponent,
@@ -27,13 +44,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
+
+ 
+
     ROUTING,
     FormsModule,
     HttpClientModule,
     NgbModule
    
+
   ],
-  providers: [],
+ // providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
