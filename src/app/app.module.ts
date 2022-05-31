@@ -11,12 +11,9 @@ import { NavBarComponent } from "./nav-bar/nav-bar.component";
 import { RegisterComponent } from "./register/register.component";
 import { RouteCheckingComponent } from './route-checking/route-checking.component';
 
-
 import { ROUTING } from './app.routing';
 
 import { TrafficSurveyComponent } from './traffic-survey/traffic-survey.component';
-
-
 import { FirstPageComponent } from './first-page/first-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -27,14 +24,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
-
     LoginComponent,
     RegisterComponent,
- 
     LoginComponent,
-  
-    RouteCheckingComponent
-
+    RouteCheckingComponent,
     NavBarComponent,
     TrafficSurveyComponent,
     FirstPageComponent,
