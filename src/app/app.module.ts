@@ -8,6 +8,11 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TrafficSurveyComponent } from './traffic-survey/traffic-survey.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { FirstPageComponent } from './first-page/first-page.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
+
 
 
 @NgModule({
@@ -15,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     NavBarComponent,
     TrafficSurveyComponent,
+    FirstPageComponent,
+
 
   ],
   imports: [
@@ -22,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ROUTING,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
    
   ],
   providers: [],
