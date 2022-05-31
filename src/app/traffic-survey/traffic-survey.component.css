@@ -25,7 +25,7 @@
   margin-bottom: 15px;
 }
   /* The alert message box */
-  .success {
+.success {
     padding: 20px;
     background-color: #8bf436; /* green */
     color: white;

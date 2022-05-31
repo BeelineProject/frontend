@@ -25,7 +25,7 @@ export class TrafficSurveyComponent implements OnInit {
     this.apiService.createSurvey(survey).subscribe(
       (result)=>{
       console.log(result);
-      this.errorMessage = `Thank you for making the street a better place`
+      this.successMessage = `Thank you for making the street a better place`
     }, 
     (error) => {
       this.errorMessage = `There is a problem connecting to server `;
