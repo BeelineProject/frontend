@@ -6,6 +6,7 @@ import { TokenStorageService } from './_services/token-storage.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   private roles: string[] = [];
   isLoggedIn = false;
   showAdminBoard = false;
@@ -24,5 +25,6 @@ export class AppComponent {
   } logout(): void {
     this.tokenStorageService.signOut();
     window.location.reload();
+
   }
 }

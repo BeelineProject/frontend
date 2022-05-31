@@ -5,12 +5,22 @@ body{
     padding: 0;
     display:inline-block;
     width: 100%;
-    height: 20%;
+
     }
-    .u-image{
-        max-height: 15px;
-        align-items: baseline;
+    li {
+      display: inline;
     }
-    #1 {
-        vertical-align: top;
+    ul {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .logo-image{
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: -6px;
     }
+    
