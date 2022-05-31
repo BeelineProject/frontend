@@ -30,9 +30,10 @@
 }
   /* The alert message box */
   .alert-success {
-  background: none;
+    background-color: transparent;
  
     color: rgb(117, 230, 115);
+    
   
   }
 
