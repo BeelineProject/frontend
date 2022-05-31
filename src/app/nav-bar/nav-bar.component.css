@@ -8,4 +8,20 @@ body{
  
 
     }
+    li {
+      display: inline;
+    }
+    ul {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .logo-image{
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: -6px;
+    }
     

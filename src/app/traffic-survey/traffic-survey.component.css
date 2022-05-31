@@ -20,12 +20,12 @@
   /* The alert message box */
 .alert {
   padding: 20px;
-  background-color: #f44336; /* Red */
+  background-color: #ee4236; /* Red */
   color: white;
   margin-bottom: 15px;
 }
   /* The alert message box */
-  .alert {
+  .success {
     padding: 20px;
     background-color: #8bf436; /* green */
     color: white;
@@ -309,5 +309,44 @@
   }
   .u-section-1 {
     background-image: linear-gradient(#f9e79b, #4c7397);
+  }
+  .button {
+    display: inline-block;
+    border-radius: 15px;
+    background-color: #002649;
+    border: none;
+    color: #fffb85;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
   }
   
