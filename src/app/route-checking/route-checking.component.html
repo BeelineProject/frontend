@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
 </head>
 <body>
-    
+  
 
     <!-- Main body -->
     <div class="jumbotron">
@@ -22,6 +22,7 @@ name="form"
 (ngSubmit)="f.form.valid && onSubmit()"
 #f="ngForm"
 novalidate>
+
     <fieldset class="url" >
       <input id="url" type="text" name="url" required placeholder="What route do you want to check?"  name="location"
       [(ngModel)]="form.location"
