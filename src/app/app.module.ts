@@ -16,6 +16,9 @@ import { ROUTING } from './app.routing';
 import { TrafficSurveyComponent } from './traffic-survey/traffic-survey.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProfileComponent } from './profile/profile.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
+//import { UpdateProfileComponent } from './update-profile/update-profile.component';
 
 
 
@@ -31,7 +34,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavBarComponent,
     TrafficSurveyComponent,
     FirstPageComponent,
-
+    ProfileComponent,
+    UpdateUserComponent,
+    
 
   ],
   imports: [

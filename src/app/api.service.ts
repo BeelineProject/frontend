@@ -14,5 +14,9 @@ export class ApiService {
   public findRoute(location: string){
     return this.httpClient.get<Survey>(`${this.API_SERVER}/survey/${location}`);
   }
+  public incPoints(id: any){
+    return this.httpClient.get(`${this.API_SERVER}/user/inc/${id}`);
+  }
+
 }
 

@@ -20,7 +20,7 @@
       <a href="/survey" id="child" class="w3-bar-item w3-button">Help others</a>
      
      
-      <a href="/register" id="child" class="w3-bar-item w3-button w3-2018-little-boy-blue" *ngIf="isLoggedIn">profile</a>
+      <a href="/profile" id="child" class="w3-bar-item w3-button w3-2018-little-boy-blue" *ngIf="isLoggedIn">profile</a>
       <a href class="nav-link" id="child" (click)="logout()"*ngIf="isLoggedIn">LogOut</a>
       <a href="/register" id="child"  class="w3-bar-item w3-button w3-2018-little-boy-blue" *ngIf="!isLoggedIn">SIGN UP</a>
       <a href="/login"  *ngIf="!isLoggedIn" id="child" class="w3-bar-item w3-button ">LOGIN</a>
