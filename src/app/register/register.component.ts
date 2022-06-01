@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginComponent } from '../login/login.component';
 import { AuthService } from '../_services/auth.service';
 
 @Component({
@@ -29,11 +30,15 @@ export class RegisterComponent implements OnInit {
         console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
+        this.reloadPage();
       },
       error: err => {
         this.errorMessage = err.error.message;
         this.isSignUpFailed = true;
       }
     });
+  }
+  reloadPage(): void {
+    window.location.replace("");
   }
 }
