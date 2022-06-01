@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { LoginComponent } from '../login/login.component';
 import { AuthService } from '../_services/auth.service';
 
@@ -8,6 +8,7 @@ import { AuthService } from '../_services/auth.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+ 
   form: any = {
     username: null,
     email: null,
@@ -16,6 +17,7 @@ export class RegisterComponent implements OnInit {
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
+  
 
   constructor(private authService: AuthService) { }
 
@@ -30,6 +32,8 @@ export class RegisterComponent implements OnInit {
         console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
+        /*this.loginComponent.form={username,password};
+        this.loginComponent.onSubmit();*/
         this.reloadPage();
       },
       error: err => {

@@ -21,9 +21,14 @@ export class TokenStorageService {
     window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
   }
   public getUser(): any {
-    const user = window.sessionStorage.getItem(USER_KEY);
+
+    const user = window.sessionStorage.getItem(USER_KEY)!;
+    console.log("inside token storage"+user);
     if (user) {
-      return JSON.parse(user);
+      const aux=JSON.parse(user);
+    console.log("inside token parsed storage"+aux);
+
+      return aux;
     }
     return {};
   }

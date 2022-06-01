@@ -18,6 +18,12 @@ export class ApiService {
   public findRoute(location: string){
     return this.httpClient.get<Survey>(`${this.API_SERVER}/survey/${location}`);
   }
+
+  public incPoints(id: any){
+    return this.httpClient.get(`${this.API_SERVER}/user/inc/${id}`);
+  }
+
+
   public findAll(){
     return this.httpClient.get<Survey>(`${this.API_SERVER}/survey`);
   }
@@ -32,5 +38,6 @@ export class ApiService {
   public delete(id:string){
     return this.httpClient.delete<Survey>(`${this.API_SERVER}/survey/${id}`);
   }
+
 }
 
