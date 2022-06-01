@@ -1,14 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TokenStorageService } from '../_services/token-storage.service';
-
+//import { TokenStorageService } from './_services/token-storage.service';
 @Component({
-  selector: 'nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css',
-               '../../styles.css'
-               ]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class NavBarComponent implements OnInit { private roles: string[] = [];
+export class AppComponent {
+  private roles: string[] = [];
   isLoggedIn = false;
   showAdminBoard = false;
   showModeratorBoard = false;
@@ -19,8 +18,8 @@ export class NavBarComponent implements OnInit { private roles: string[] = [];
     if (this.isLoggedIn) {
       const user = this.tokenStorageService.getUser();
       this.roles = user.roles;
-     // this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
-     // this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
       this.username = user.username;
     }
   }
@@ -28,5 +27,4 @@ export class NavBarComponent implements OnInit { private roles: string[] = [];
     this.tokenStorageService.signOut();
     window.location.reload();
   }
- 
 }

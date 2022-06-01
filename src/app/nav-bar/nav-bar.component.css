@@ -8,9 +8,24 @@ body{
 
     }
     li {
-      display: inline;
+      display: inline-block;
+    }
+    .w3-top{
+      white-space: nowrap;
+    
+      offset: 15px;;
+    
+     
+    }
+    .child{
+      display: inline-block;
+      margin-right: 5%;
+      offset: 5%;
+      padding-right: 5%;
+     
     }
     ul {
+      display: inline-block;
         position: fixed;
         top: 0;
         width: 100%;
