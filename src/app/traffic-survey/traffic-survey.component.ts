@@ -14,6 +14,7 @@ export class TrafficSurveyComponent implements OnInit {
   constructor(private apiService: ApiService,private tokenStorage: TokenStorageService) { }
 
   ngOnInit(): void {
+    
   }
   getSurvey(survey : any){
     console.log(survey.addition);

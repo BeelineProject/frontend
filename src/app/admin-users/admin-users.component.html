@@ -1,0 +1,57 @@
+
+<body>
+
+    <div class="sidebar" *ngIf="isAdmin">
+    <br>
+    <br>
+      <a href="/admin">Surveys</a>
+      <a class="active" href="/admin/user">Users</a>
+    </div>
+    
+    <div class="content" *ngIf="isAdmin">
+    <div class="center">
+      <div class="row">
+
+      
+        <div class="column">
+          <div class="card">
+            <h3  style="color:rgb(0, 16, 80);font-weight: 500;">Number of users</h3>
+           
+            <h3>{{count}}</h3>
+            
+         
+          </div>
+        </div>
+        
+
+        <div class="column">
+            <div class="card">
+              <h3  style="color:rgb(0, 16, 80);font-weight: 500;">Number TOMORROW</h3>
+              <h3>100000000</h3>
+            </div>
+          </div>
+      </div>
+      </div>
+     
+       <table id ="surveys">
+              <tr>
+                <th>Delete</th>
+                <th mat-header-cell *ngFor = "let row of headers">{{row}} </th>
+
+               
+              </tr>
+              
+          
+            <ng-container matColumnDef="name">
+      <tr *ngFor = "let row of surveys">
+        <td><button type="button" (click)="delete(row.id)"> <img src="../../assets/images/bin.png" height ="80" width="100" /></button></td>
+        <td *ngFor = "let column of headers">
+          {{row[column]}}
+        </td>
+        
+      </tr>
+</ng-container>
+</table>
+
+</div>
+</body>
