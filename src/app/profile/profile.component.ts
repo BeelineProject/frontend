@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from '../_services/token-storage.service';
+import { UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -8,13 +9,29 @@ import { TokenStorageService } from '../_services/token-storage.service';
 })
 export class ProfileComponent implements OnInit {
   currentUser: any;
+  userService: any;
+  errorMessage='';
 
-  constructor(private token: TokenStorageService) { }
+  constructor(private token: TokenStorageService,
+     private user: UserService) { }
 
   ngOnInit(): void {
-    console.log("in profilr"+this.currentUser);
-    this.currentUser = this.token.getUser();
-    console.log("in profil1"+this.currentUser);
+    let l =localStorage.getItem('currentUser')!;
+    let id = JSON.parse(l).identifier;
+    this.user.findOne(id).subscribe(
+      (data) => {
+
+     
+        this.currentUser=data.user;
+       
+      },
+        (error) => {
+     
+        this.errorMessage = `There is a problem connecting to server `;
+        console.log(this.errorMessage);
+      }
+      );
+    
   }
 }
 
