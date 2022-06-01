@@ -10,12 +10,14 @@ import { LoginComponent } from "./login/login.component";
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
 import { RegisterComponent } from "./register/register.component";
 import { RouteCheckingComponent } from './route-checking/route-checking.component';
-
 import { ROUTING } from './app.routing';
 
 import { TrafficSurveyComponent } from './traffic-survey/traffic-survey.component';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AdminComponent } from './admin/admin.component';
+import { AdminUsersComponent } from './admin-users/admin-users.component';
+import { CommonModule } from "@angular/common";
 
 
 
@@ -31,12 +33,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavBarComponent,
     TrafficSurveyComponent,
     FirstPageComponent,
+    AdminComponent,
+    AdminUsersComponent
+  
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
 
  
 
