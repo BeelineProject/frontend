@@ -7,9 +7,11 @@
     <br>
       <a class="active" href="/admin">Surveys</a>
       <a href="/admin/user">Users</a>
+      <a href="/admin/message">Messages</a>
+      
 </div>
     
-<div class="content"*ngIf="isAdmin" >
+<div class="content" *ngIf="isAdmin" >
     <div class="center">
       <div class="row">
 
@@ -24,20 +26,7 @@
           </div>
         </div>
         
-        <!--<div class="column">
-          <div class="card">
-            <h3 style="color:rgb(0, 16, 80);font-weight: 500;">TODAY</h3>
-         
-            <h3>{{countDate}}</h3>
-          </div>
-        </div>-->
-        <div class="column">
-            <div class="card">
-              <h3  style="color:rgb(0, 16, 80);font-weight: 500;">TOMORROW</h3>
-              <h3>100000000</h3>
-            </div>
-          </div>
-      </div>
+        </div>
       </div>
      
        <table id ="surveys">

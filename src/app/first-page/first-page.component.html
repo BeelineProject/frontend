@@ -148,14 +148,14 @@
 <section class="">
   <br><br>
 <div class="wrapper" >
-  <form class="form2">
+  <form class="form2" #message="ngForm" (ngSubmit)="sendMessage(message)">
     <div class="pageTitle2 title2">CONTACT US</div>
-    <div class="secondaryTitle2 title2">Please fill this form to give us some feedback</div>
-    <input type="text" class="name2 formEntry2" placeholder="Name" />
-    <input type="text" class="email2 formEntry2" placeholder="Email"/>
-    <textarea class="message2 formEntry2" placeholder="Message"></textarea>
+    <div class="secondaryTitle2 title2" >Please fill this form to give us some feedback</div>
+    <input type="text" class="name2 formEntry2" ngModel name="name" placeholder="Name" />
+    <input type="text" class="email2 formEntry2" placeholder="Email" ngModel name="email"/>
+    <textarea class="message2 formEntry2" placeholder="Message" ngModel name="message"></textarea>
     <a href = "mailto: tasnimdakhlitd@gmail.com">
-    <button class="submit2 formEntry2" onclick="thanks()">Submit</button>
+    <button class="submit2 formEntry2">Submit</button>
   </a>
   </form>
 </div>

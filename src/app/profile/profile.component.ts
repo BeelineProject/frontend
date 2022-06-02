@@ -22,7 +22,7 @@ export class ProfileComponent implements OnInit {
       (data) => {
 
      
-        this.currentUser=data.user;
+        this.currentUser=data;
        
       },
         (error) => {

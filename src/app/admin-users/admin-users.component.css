@@ -91,6 +91,7 @@ body {
   
   /* Style the counter cards */
   .card {
+    width: 600px;
     box-shadow: 0 4px 8px 0 rgba(0, 128, 255, 0.2);
     padding: 16px;
     text-align: center;

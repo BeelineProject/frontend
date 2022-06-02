@@ -23,7 +23,9 @@ import { UpdateUserComponent } from './update-user/update-user.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminUsersComponent } from './admin-users/admin-users.component';
 import { CommonModule } from "@angular/common";
-
+import { AdComponent } from './ad/ad.component';
+import { MessageComponent } from './message/message.component';
+ 
 
 
 
@@ -45,7 +47,10 @@ import { CommonModule } from "@angular/common";
     
 
     AdminComponent,
-    AdminUsersComponent
+    AdminUsersComponent,
+    AdComponent,
+    MessageComponent,
+
   
 
 
