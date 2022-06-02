@@ -1,0 +1,48 @@
+<div class="container">
+
+ 
+
+    <div class="cover">
+      <style>
+        body {
+          background-image: url('nature.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+        </style>
+  
+      <h1>FIND YOUR BEELINE</h1>
+      <form  class="flex-form"  *ngIf="!isSuccessful"
+      name="form"
+      (ngSubmit)="f.form.valid && onSubmit()"
+      #f="ngForm"
+      novalidate>
+        <label for="location">
+          <i class="ion-location"></i>
+        </label>
+        <input type="search" placeholder="What route do you want to check?"  name="location"
+        [(ngModel)]="form.location"
+        required
+  
+        #location="ngModel">
+        <div class="alert-danger" *ngIf="location.errors && f.submitted">
+          <div *ngIf="location.errors['required']">the route is required</div>
+        
+        </div>
+        <input type="submit" value="Search"><br />
+        <div class="alert alert-warning" *ngIf="f.submitted && checkFailed">
+          checking failed!<br />{{ errorMessage }}
+        </div>
+  
+      <div class="alert alert-success" *ngIf="isSuccessful">
+        your request is being treated!
+      </div>
+      </form>
+     
+    </div>
+  
+  </div>
+  
+  
+  

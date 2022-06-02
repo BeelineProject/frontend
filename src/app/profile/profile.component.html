@@ -1,0 +1,45 @@
+
+<div class="container d-flex justify-content-center" >
+
+    <div class="card p-3 py-4">
+        <div class="text-center"> 
+		<img src="../../assets/user.png" width="100" class="rounded-circle">
+            <h3 class="mt-2">{{ currentUser.username }}</h3>
+			<span class="mt-1 clearfix">{{ currentUser.email }}</span>
+			
+			<div class="row mt-3 mb-3">
+			
+			  <div class="col-md-4">
+                <li *ngFor="let role of currentUser.roles">
+                    {{ role }}
+                  </li>
+			  </div>
+             
+			 
+			
+			</div>
+			
+			<hr class="line">
+			
+			<small class="mt-4">your gift points are</small>
+              <div class="social-buttons mt-5"> 
+			   <button class="neo-button"><i class="fa fa-facebook fa-1x">3</i> </button> 
+			   
+			  </div>
+              <div class="profile mt-5">
+                <a href="/updateUser">
+                <button  class="profile_button px-5">Edit profile</button>
+                </a>
+                <button href="" class="profile_button px-5">Points to gifts</button>
+           </div>
+			  
+			 <div class="profile mt-5">
+			 
+			
+  
+		</div>
+        
+			   
+        </div>
+    </div>
+</div>

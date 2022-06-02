@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <title>login</title>
+   <!-- <link rel="stylesheet" href="../../styles.css" media="screen">-->
+    <link rel="stylesheet" href="login.component.css" media="screen">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+  </head>
+  <body class="u-body u-xl-mode">
+
+    <section class="u-align-center u-clearfix u-gradient u-section-1" id="carousel_33d7">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="title">Login</div>
+  
+        <div class="u-align-center u-container-style u-custom-color-3 u-group u-radius-30 u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <div class="u-expanded-width u-form u-form-1">
+                <form
+                *ngIf="!isLoggedIn"
+                name="form"
+                (ngSubmit)="f.form.valid && onSubmit()"
+                #f="ngForm"
+                novalidate
+              >
+                <div class="u-form-group u-form-name u-label-top">
+                  <label for="identifier" class="u-label u-text-custom-color-4 u-label-1">Username</label>
+                
+                <input
+                type="text"
+                class="u-border-3 u-border-palette-1-light-3 u-custom-color-8 u-input u-input-rectangle u-radius-10"
+                placeholder="please enter your username "
+                name="identifier"
+                [(ngModel)]="form.identifier"
+                required
+               
+                #identifier="ngModel"
+              />
+              <div class="alert-danger"  role="alert"
+              *ngIf="identifier.errors && f.submitted">
+              Username is required!
+                </div>
+               
+              </div>
+                
+           
+                
+                <div class="u-form-group u-label-top u-form-group-3">
+                    <label for="password" class="u-label u-text-custom-color-4 u-label-4">Password</label>
+                    <input
+                    type="password"
+                    class="u-border-3 u-border-palette-1-light-3 u-custom-color-8 u-input u-input-rectangle u-radius-10"
+                placeholder="please enter your password "
+                    name="password"
+                    [(ngModel)]="form.password"
+                    required
+                    minlength="6"
+                    #password="ngModel"
+                  />
+                  <div class="alert-danger" *ngIf="password.errors && f.submitted">
+                    <div *ngIf="password.errors['required']">Password is required</div>
+                    <div *ngIf="password.errors['minlength']">
+                      Password must be at least 6 characters
+                    </div>
+                  </div>
+                </div>
+                   <!--<div class="u-form-group u-form-name u-label-top">
+                  <label for="addition" class="u-label u-text-custom-color-4 u-label-1">Anything to add ?</label>
+                  <input required id="addition" type="text" placeholder="write whatever you find useful" id="addition" ngModel name="addition" class="u-border-3 u-border-palette-1-light-3 u-custom-color-8 u-input u-input-rectangle u-radius-10" >
+                </div>
+            
+            
+              <div class="u-align-right u-form-group u-form-submit u-label-top">
+                <br>
+                  <button type="submit" value="submit" class="u-active-custom-color-2 u-border-active-palette-4-light-1 u-border-hover-palette-4-light-1 u-border-none-btn u-btn-round u-btn-submit u-button-style u-custom-color-7 u-hover-custom-color-2 u-radius-10 u-text-custom-color-6 u-btn-1">
+                  submit survey and help other drivers !
+                  </button><br>
+                </div>-->
+              
+
+
+                <div class="u-align-right u-form-group u-form-submit u-label-top">
+                    <button class="u-active-custom-color-2 u-border-active-palette-4-light-1 u-border-hover-palette-4-light-1 u-border-none-btn u-btn-round u-btn-submit u-button-style u-custom-color-7 u-hover-custom-color-2 u-radius-10 u-text-custom-color-6 u-btn-1">Login</button>
+                  </div>
+            
+                  <div class="alert alert-warning" *ngIf="f.submitted && isLoginFailed">
+                    Login failed!<br />{{ errorMessage }}
+                  </div>
+              
+            
+                <div class="alert alert-success" *ngIf="isLoggedIn">
+                  Logged in as {{ roles }}.
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+     
+
+    </section>
+
+  </body>
+</html> 

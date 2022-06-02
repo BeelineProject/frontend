@@ -1,0 +1,123 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="beline-logo.png">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+</head>
+<body>
+  
+
+    <!-- Main body -->
+    <div class="jumbotron">
+
+     
+
+   <div *ngIf="isSuccessful" class="alert-successful" >
+    {{message}}
+   </div>
+
+   <div *ngIf="isFailed" class="alert-failure" >
+    {{errorMessage }} 
+   </div>
+
+ <form  href="#" autocomplete="off"
+name="form"
+(ngSubmit)="f.form.valid && onSubmit()"
+#f="ngForm"
+novalidate>
+
+    <fieldset class="url" >
+      <input id="url" type="text" name="url" required placeholder="What route do you want to check?"  name="location"
+      [(ngModel)]="form.location"
+    #location="ngModel">
+      <label for="url"><i class="fa fa-search" aria-hidden="true"></i>check</label>
+      <div class="after"></div>
+    </fieldset>
+    <fieldset class="enter">
+      <button></button>
+    </fieldset>
+  
+  </form> </div>
+   
+  <div *ngIf="message" class="alert-successful" >
+    <span class="closebtn33" onclick="this.parentElement.style.display='none';" >&times;</span>
+    {{message}}
+  </div>
+</body>
+</html>
+
+
+
+
+<!--<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="beline-logo.png">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+</head>
+<body>
+-->
+
+    <!-- Main body -->
+   <!-- <div class="jumbotron">-->
+<!--
+     
+  </div>
+ 
+<form action="#" autocomplete="off"  *ngIf="!isSuccessful"
+name="form"
+(ngSubmit)="f.form.valid && onSubmit()"
+#f="ngForm"
+novalidate>
+    <fieldset class="url">
+      <input id="url" type="text"  placeholder="What route do you want to check?"  name="location"
+      [(ngModel)]="form.location"
+      required
+
+      #location="ngModel">
+      <label for="url"><i class="fa fa-search" aria-hidden="true"></i> check</label>
+      <div class="after"></div>
+    </fieldset>
+    <fieldset class="enter">
+  <button></button>
+    </fieldset>
+    <input type="submit" value="Search"><br />
+        <div class="alert alert-warning" *ngIf="f.submitted && checkFailed">
+          checking failed!<br />{{ errorMessage }}
+        </div>
+  
+      <div class="alert alert-success" *ngIf="isSuccessful">
+        your request is being treated!
+      </div>
+  </form>
+</body>
+</html>-->
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+<header class="w3-display-container w3-content w3-wide" style="max-width:2000px;" id="home">
+    <img class="w3-image" src="assets/images/street3.png" alt="map" width="2000px" height="40px">
+    <div class="w3-display-middle w3-margin-top w3-center">
+      <h1 class="w3-xxlarge w3-text-yellow"><span class="w3-padding w3-pale-blue w3-opacity-min"><b>Don't know which road to choose ? </b></span> 
+        <br><br>$
+          <h3>Don't worry we make the best choice for you : </h3> <br>
+        <button class="button button1"><b>CHECK ROUTE</b></button>
+      </h1>
+    </div>
+  </header>
+</body> 
+</html> -->

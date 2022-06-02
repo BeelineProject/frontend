@@ -1,0 +1,130 @@
+
+  <!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <title>update profile</title>
+   <!-- <link rel="stylesheet" href="../../styles.css" media="screen">-->
+    <link rel="stylesheet" href="update-user.component.css" media="screen">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+  </head>
+  <body class="u-body u-xl-mode">
+
+    <section class="u-align-center u-clearfix u-gradient u-section-1" id="carousel_33d7">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="title">update</div>
+        <img class="profile-img-card" src="../../assets/user (2).png">
+        <div class="u-align-center u-container-style u-custom-color-3 u-group u-radius-30 u-shape-round u-group-1">
+           
+
+          <div class="u-container-layout u-container-layout-1">
+              
+            <div class="u-expanded-width u-form u-form-1">
+                <form
+                *ngIf="!isSuccessful"
+                name="form"
+                (ngSubmit)="f.form.valid && onSubmit()"
+                #f="ngForm"
+                novalidate
+              >
+                <div class="u-form-group u-form-name u-label-top">
+                  <label for="username" class="u-label u-text-custom-color-4 u-label-1">Username</label>
+                
+                <input
+                type="text"
+                class="u-border-3 u-border-palette-1-light-3 u-custom-color-8 u-input u-input-rectangle u-radius-10"
+                placeholder={{user.username}}
+                name="username"
+              required
+                value={{user.username}}
+                [(ngModel)]="form.username"
+                minlength="3"
+                maxlength="20"
+                #username="ngModel"
+              />
+             </div>
+                
+                <div class="u-form-group u-label-top u-form-group-3">
+                  <label for="email" class="u-label u-text-custom-color-4 u-label-3">Email</label>
+
+                    <input
+                      type="email"
+                      class="u-border-3 u-border-palette-1-light-3 u-custom-color-8 u-input u-input-rectangle u-radius-10"
+               required
+                placeholder={{user.email}}
+                value={{user.email}}
+                      name="email"
+                      [(ngModel)]="form.email"
+                    
+                      email
+                      #email="ngModel"
+                    />
+                    <div class="alert-danger" *ngIf="email.errors && f.submitted">
+                     
+                      <div *ngIf="email.errors['email']">
+                        Email must be a valid email address
+                      </div>
+                    </div>
+                </div>
+                
+                <div class="u-form-group u-label-top u-form-group-3">
+                    <label for="password" class="u-label u-text-custom-color-4 u-label-4">Password</label>
+                    <input
+                    type="password"
+                    class="u-border-3 u-border-palette-1-light-3 u-custom-color-8 u-input u-input-rectangle u-radius-10"
+                    placeholder="you can update your password"
+                    name="password"
+                    [(ngModel)]="form.password"
+                    value=""
+                    autocomplete="false"
+                    
+                    minlength="6"
+                    #password="ngModel"
+                  />
+                  <div class="alert-danger" *ngIf="password.errors && f.submitted">
+                
+                    <div *ngIf="password.errors['minlength']">
+                      Password must be at least 6 characters
+                    </div>
+                  </div>
+                </div>
+                   <!--<div class="u-form-group u-form-name u-label-top">
+                  <label for="addition" class="u-label u-text-custom-color-4 u-label-1">Anything to add ?</label>
+                  <input required id="addition" type="text" placeholder="write whatever you find useful" id="addition" ngModel name="addition" class="u-border-3 u-border-palette-1-light-3 u-custom-color-8 u-input u-input-rectangle u-radius-10" >
+                </div>
+            
+            
+              <div class="u-align-right u-form-group u-form-submit u-label-top">
+                <br>
+                  <button type="submit" value="submit" class="u-active-custom-color-2 u-border-active-palette-4-light-1 u-border-hover-palette-4-light-1 u-border-none-btn u-btn-round u-btn-submit u-button-style u-custom-color-7 u-hover-custom-color-2 u-radius-10 u-text-custom-color-6 u-btn-1">
+                  submit survey and help other drivers !
+                  </button><br>
+                </div>-->
+              
+
+
+                <div class="u-align-right u-form-group u-form-submit u-label-top">
+                    <button class="u-active-custom-color-2 u-border-active-palette-4-light-1 u-border-hover-palette-4-light-1 u-border-none-btn u-btn-round u-btn-submit u-button-style u-custom-color-7 u-hover-custom-color-2 u-radius-10 u-text-custom-color-6 u-btn-1">update</button>
+                  </div>
+            
+                  <div class="alert alert-warning" *ngIf="f.submitted && isupdateFailed">
+                   update failed!<br />{{ errorMessage }}
+                  </div>
+              
+            
+                <div class="alert alert-success" *ngIf="isSuccessful">
+                  Your update is successful!
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+     
+
+    </section>
+
+  </body>
+</html> 
+
