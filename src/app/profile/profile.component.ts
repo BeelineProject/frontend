@@ -33,5 +33,8 @@ export class ProfileComponent implements OnInit {
       );
     
   }
+  onSubmit():void{
+    
+  }
 }
 
