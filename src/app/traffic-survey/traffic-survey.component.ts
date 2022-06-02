@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { data } from 'jquery';
 import { ApiService } from '../api.service';
 import { Survey } from '../survey';
 import { TokenStorageService } from '../_services/token-storage.service';
@@ -52,9 +53,13 @@ export class TrafficSurveyComponent implements OnInit {
         console.log("id user0"+this.uid);
         console.log("in on submit");
         const {username,email,password}=this.userEntity;
-        const points=this.userEntity.points+1;
+        const points=Number(this.userEntity.points)+1;
         const dto={username,email,password,points}
-        this.user.updateUser(this.uid,dto);
+        this.user.updateUser(this.uid,dto).subscribe({
+          next:data=>{
+            console.log(data);
+          }
+        });
         console.log("after update");
       this.successMessage = `Thank you for making the street a better place`
     }, 
