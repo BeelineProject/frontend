@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
 
         this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUser(data);
+        console.log("id is "+data['id']);
         localStorage.setItem('currentUser', JSON.stringify({ identifier:identifier }));
 
 

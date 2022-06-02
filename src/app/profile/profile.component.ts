@@ -22,7 +22,7 @@ export class ProfileComponent implements OnInit {
       (data) => {
 
      
-        this.currentUser=data.user;
+        this.currentUser=data;
        
       },
         (error) => {
@@ -31,6 +31,9 @@ export class ProfileComponent implements OnInit {
         console.log(this.errorMessage);
       }
       );
+    
+  }
+  onSubmit():void{
     
   }
 }

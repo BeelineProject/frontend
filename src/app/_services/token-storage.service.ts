@@ -26,7 +26,7 @@ export class TokenStorageService {
     console.log("inside token storage"+user);
     if (user) {
       const aux=JSON.parse(user);
-    console.log("inside token parsed storage"+aux);
+   // console.log("inside token parsed storage"+aux);
 
       return aux;
     }

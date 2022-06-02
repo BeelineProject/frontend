@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const API_URL = 'http://localhost:3000/user/';
+const API_URL = 'http://localhost:3000/user';
 
 @Injectable({
   providedIn: 'root'
@@ -22,8 +22,9 @@ export class UserService {
     return this.http.get(API_URL + 'admin', { responseType: 'text' });
   }
 
-  updateUser(id: any): Observable<any>{
-    return this.http.patch(API_URL +":"+ id, { responseType: 'text' });
+  updateUser(id: any,data:any): Observable<any>{
+    console.log("inside update user service");
+    return this.http.patch(API_URL +`/${id}`,data, { responseType: 'text' });
 
   }
 

@@ -8,6 +8,7 @@ import { RegisterComponent } from "./register/register.component";
 import { RouteCheckingComponent } from "./route-checking/route-checking.component";
 
 import {TrafficSurveyComponent} from "./traffic-survey/traffic-survey.component"
+import { UpdateUserComponent } from "./update-user/update-user.component";
 //import { UpdateProfileComponent } from "./update-profile/update-profile.component";
  
 const APP_ROUTING : Routes =[
@@ -18,7 +19,7 @@ const APP_ROUTING : Routes =[
     {path:'route',component : RouteCheckingComponent},
     {path:'login',component : LoginComponent},
     {path:'register',component : RegisterComponent},
-   // {path:'updateUser',component : UpdateProfileComponent},
+    {path:'updateUser',component : UpdateUserComponent},
 
     {path:'admin', component: AdminComponent},
     {path:'admin/user', component: AdminUsersComponent}
