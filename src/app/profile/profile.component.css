@@ -19,9 +19,9 @@ body {
 
 .card {
 	color:#fff;
-    width: 350px;
+    width: 900px;
     margin-top: 60px;
-    margin-left: 20;
+    margin-left: 200px;
     border-radius: 10px;
    background: linear-gradient(145deg, #4dbbdc, #59a2cd);
 box-shadow:  20px 20px 60px #3c53a0, 
@@ -40,7 +40,7 @@ box-shadow:  20px 20px 60px #3c53a0,
     border: none;
     margin-right: 10px;
     border-radius: 50%;
-background: linear-gradient(145deg, #6df8f1, #f9e79b);
+background: linear-gradient(145deg, #ffffff, #f9e79b);
 box-shadow: inset 20px 20px 60px #75dbcc, 
              inset -20px -20px 60px #69f5e9;
 }
@@ -86,11 +86,11 @@ box-shadow:  28px 28px 57px #f9e79b,
 .profile_button{
 	color:rgb(220, 205, 133);
 	padding:8px; 
-    
+    margin-left: 40px;
    border:none;
    outline:0 !important;
    margin-bottom: 25px;
-border-radius: 50px;
+   border-radius: 50px;
 background: #f9e79b;
 box-shadow:  28px 28px 57px #90e4e1, 
              -28px -28px 57px #9bf9f6;

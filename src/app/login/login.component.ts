@@ -38,11 +38,9 @@ export class LoginComponent implements OnInit {
         console.log("id is "+data['id']);
         localStorage.setItem('currentUser', JSON.stringify({ identifier:identifier }));
 
-
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
-        localStorage.setItem('currentUser', JSON.stringify({ identifier:identifier }));
         this.reloadPage();
       },
       error: err => {

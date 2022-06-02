@@ -1,0 +1,39 @@
+
+
+<body >
+
+    <div class="sidebar" *ngIf="isAdmin">
+        <br>
+        <br>
+          <a  href="/admin">Surveys</a>
+          <a href="/admin/user">Users</a>
+          <a class="active" href="/admin/message">Messages</a>
+          
+    </div>
+        
+    <div class="content" *ngIf="isAdmin" >
+        <br>
+        <br>
+        <br>
+         
+           <table id ="surveys">
+                  <tr>
+    
+                    <th mat-header-cell *ngFor = "let row of headers">{{row}} </th>
+    
+                   
+                  </tr>
+                  
+              
+                <ng-container matColumnDef="name">
+          <tr *ngFor = "let row of surveys">
+            <td *ngFor = "let column of headers">
+              {{row[column]}}
+            </td>
+            
+          </tr>
+    </ng-container>
+    </table>
+    
+    </div>
+    </body>

@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Survey } from './survey';
+import { Message } from './message';
 import { dateEntity } from './traffic-survey/date';
 const AUTH_API = 'http://localhost:3000/';
 const httpOptions = {
@@ -27,6 +28,10 @@ export class ApiService {
   public findAll(){
     return this.httpClient.get<Survey>(`${this.API_SERVER}/survey`);
   }
+  
+  public findMessages(){
+    return this.httpClient.get<Survey>(`${this.API_SERVER}/message`);
+  }
   public countByDate(date : any){
     console.log('inside countDate');
     return this.httpClient.get(AUTH_API +'survey/count/date', 
@@ -37,6 +42,10 @@ export class ApiService {
   }
   public delete(id:string){
     return this.httpClient.delete<Survey>(`${this.API_SERVER}/survey/${id}`);
+  }
+  public createMessage(message : any){ 
+    console.log("inside create message")
+    return this.httpClient.post(`${this.API_SERVER}/message`, message);
   }
 
 }

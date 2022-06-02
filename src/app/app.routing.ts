@@ -3,6 +3,7 @@ import { AdminUsersComponent } from "./admin-users/admin-users.component";
 import { AdminComponent } from "./admin/admin.component";
 import { FirstPageComponent } from "./first-page/first-page.component";
 import { LoginComponent } from "./login/login.component";
+import { MessageComponent } from "./message/message.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { RegisterComponent } from "./register/register.component";
 import { RouteCheckingComponent } from "./route-checking/route-checking.component";
@@ -22,7 +23,10 @@ const APP_ROUTING : Routes =[
     {path:'updateUser',component : UpdateUserComponent},
 
     {path:'admin', component: AdminComponent},
-    {path:'admin/user', component: AdminUsersComponent}
+    {path:'admin/user', component: AdminUsersComponent},
+    {path:'admin/message', component: MessageComponent},
+   
+
 
 
 
